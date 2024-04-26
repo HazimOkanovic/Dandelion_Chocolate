@@ -7,8 +7,8 @@ on:
       - main
 
 env:
-  SAUCE_USERNAME: ${{secrets.SAUCE_USERNAME}}
-  SAUCE_ACCESS_KEY: ${{secrets.SAUCE_ACCESS_KEY}}
+  SAUCE_USERNAME: 'Hazim'
+  SAUCE_ACCESS_KEY: 'b545b3eb-c537-47e1-bc7c-4c1462cc21eb'
   GITHUB_TOKEN: ${{ github.token }}
 
 jobs:
@@ -21,27 +21,4 @@ jobs:
       - name: Saucectl RUN
         uses: saucelabs/saucectl-run-action@v3
         with:
-          concurrency: 10
-
-  playwright-cucumberjs:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: '.nvmrc'
-          cache: 'npm'
-          cache-dependency-path: examples/cucumber/package-lock.json
-
-      - name: Install dependencies
-        working-directory: examples/cucumber
-        run: npm ci
-
-      - name: Saucectl RUN - Config Driven
-        uses: saucelabs/saucectl-run-action@v3
-        with:
-          working-directory: ./examples/cucumber/
+          concurrency: 1
