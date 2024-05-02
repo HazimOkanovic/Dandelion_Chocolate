@@ -1,8 +1,8 @@
-import { test, expect } from "@playwright/test";
+import { test } from "@playwright/test";
 import { MothersDayPage } from "../pages/mothersDayPage";
 
-test('Check if there is sold out product',async ({ page }) => {
-    await page.goto("https://www.dandelionchocolate.com/collections/mothers-day");
+test('Check if there is sold out product in the Mothers Day Collection',async ({ page }) => {
+    await page.goto("https://www.dandelionchocolate.com/collection/mothers-day");
     let mothersDayPage = new MothersDayPage(page);
     let products_number;
     let add_to_cart_number;
