@@ -18,6 +18,7 @@ test.beforeAll(async ({ browser, baseURL }) => {
 });
 
 test.describe('Check the checkout flow', () => {
+    test.describe.configure({ mode: 'serial' });
     test('Go to the shop page',async () => {
         let headerPage = new Header(page);
         await headerPage.clickShopLink();
@@ -67,7 +68,7 @@ test.describe('Check the checkout flow', () => {
     test('Enter all info on the checkout page',async () => {
         let checkoutPage = new CheckoutPage(page);
 
-        await page.waitForTimeout(6000);
+        await page.waitForTimeout(10000);
         await checkoutPage.enterEmail(Data.userEmail);
         await checkoutPage.enterFirstName(Data.firstName);
         await checkoutPage.enterLastName(Data.lastName);

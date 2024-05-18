@@ -14,7 +14,6 @@ export class EmailPage {
     this.refreshButton = page.locator("//button[@class='refresh']");
 }
 
-
   async verifyReceivedEmail(){
     await this.page.goto("https://inboxkitten.com/inbox/" + Data.name+"/list");
     await this.page.waitForTimeout(10000);
@@ -39,6 +38,20 @@ export class EmailPage {
     await newPage.waitForTimeout(10000);
     await expect(await newPage.locator("//div[@id='cffOrderEditingPageOrderCancelledAlert']//h4")).toHaveText(Data.orderCancelledConfirmation);
     await newPage.close();
+    await this.page.close();
+  }
+
+  async getWholesaleNumber(){
+    await this.page.goto("https://inboxkitten.com/inbox/hazim.okanovic/list");
+    await this.page.waitForTimeout(10000);
+    await this.refreshButton.click();
+    await expect(await this.page.getByText('mailer@shopify.com').first()).toContainText("mailer@shopify.com");
+    await this.page.getByText('mailer@shopify.com').first().click();
+    const iframe = await this.page.frameLocator("#message-content");
+    
+    const wholesaleNumber = await iframe.locator("//h2[@class='mail-token']");
+    
+    return wholesaleNumber;
     await this.page.close();
   }
 

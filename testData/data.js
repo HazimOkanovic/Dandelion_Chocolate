@@ -24,6 +24,13 @@ export const Data = {
     hanamiCollectionTotalPriceCart: "Subtotal $75",
     zeroPrice: '$0.00', 
     orderCancelledConfirmation : 'Order Cancelled and Refunded.', 
+    wholeSaleHeader : "Chocolate for Our Partners",
+    dandelionEmail : "hazim@dandelionchocolate.com", 
+    password : "Mejrema28.12", 
+    wholeSaleBars : ["Kokoa Kamili", "Maya Mountain", "Zorzal Comunitario", "Anamalai", "Costa Esmeraldas", "Semuliki Forest", "Costa Esmeraldas"],
+    otherWholeSaleProducts : ["House Hot Chocolate Mix, Camino Verde, Ecuador 70%, Case of 9 vials", "Making Chocolate: From Bean to Bar to S'more"],
+    addToCartWholeSale : "ADD TO CART",
+    addToCartOtherProductsWholeSale: " Add to Cart "
 }
 
 export const PagesUrls = {

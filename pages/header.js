@@ -1,11 +1,24 @@
+const { WholesalePage } = require("./wholesalePage");
+import { expect } from "@playwright/test";
+
 exports.Header = class Header {
 
     constructor(page) {
         this.page = page;
         this.shopAllLink = page.locator("(//a[@title='Shop'])[1]");
+        this.moreLink = page.locator("//a[@title='More']");
+        this.wholeSaleLink = page.locator("//a[@title='Wholesale']");
     }
 
     async clickShopLink(){
         await this.shopAllLink.click();
+    }
+
+    async clickMoreLink(){
+        await this.moreLink.click();
+    }
+
+    async clickWholesaleAndVerifyTitle(){
+         
     }
 }
