@@ -49,7 +49,8 @@ test.describe('Wholesale tests', () => {
         for (const item of products) {
             await item.click();
             productNames.push(await wholesalePage.barProductNames.textContent());
-            expect(await wholesalePage.addToCartButton).toHaveText(Data.addToCartWholeSale)
+            expect(await wholesalePage.addToCartButton).toBeEnabled();
+            expect(await wholesalePage.addToCartButtonText).toHaveText(Data.addToCartWholeSale)
             await newPage.goBack();
         }
         expect(await productNames).toEqual(Data.wholeSaleBars)
@@ -66,7 +67,7 @@ test.describe('Wholesale tests', () => {
         for (const item of products) {
             await item.click();
             productNames.push(await wholesalePage.otherProductNames.textContent());
-            expect(await wholesalePage.addToCartButtonOtherProducts).toHaveText(Data.addToCartOtherProductsWholeSale)
+            expect(await wholesalePage.addToCartButtonText).toHaveText(Data.addToCartWholeSale)
             await newPage.goBack();
         }
         expect(await productNames).toEqual(Data.otherWholeSaleProducts)

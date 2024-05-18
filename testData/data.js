@@ -29,8 +29,7 @@ export const Data = {
     password : "Mejrema28.12", 
     wholeSaleBars : ["Kokoa Kamili", "Maya Mountain", "Zorzal Comunitario", "Anamalai", "Costa Esmeraldas", "Semuliki Forest", "Costa Esmeraldas"],
     otherWholeSaleProducts : ["House Hot Chocolate Mix, Camino Verde, Ecuador 70%, Case of 9 vials", "Making Chocolate: From Bean to Bar to S'more"],
-    addToCartWholeSale : "ADD TO CART",
-    addToCartOtherProductsWholeSale: " Add to Cart "
+    addToCartWholeSale: " Add to Cart "
 }
 
 export const PagesUrls = {
