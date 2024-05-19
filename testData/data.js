@@ -29,10 +29,17 @@ export const Data = {
     password : "Mejrema28.12", 
     wholeSaleBars : ["Kokoa Kamili", "Maya Mountain", "Zorzal Comunitario", "Anamalai", "Costa Esmeraldas", "Semuliki Forest", "Costa Esmeraldas"],
     otherWholeSaleProducts : ["House Hot Chocolate Mix, Camino Verde, Ecuador 70%, Case of 9 vials", "Making Chocolate: From Bean to Bar to S'more"],
-    addToCartWholeSale: " Add to Cart "
+    addToCartWholeSale: " Add to Cart ", 
+    dateNightHeader : "Date Night with Dandelion", 
+    chocolateMakingHeader : "Chocolate Making", 
+    chocolateTastingHeader : "Chocolate Tasting - 16th Street Factory",
+    truffleMakingHeader : "Truffle Making",
+    factoryTour : "Factory Tour",
+    factoryTourHeader : "Dandelion Chocolate Factory Tour"
 }
 
 export const PagesUrls = {
     shopPage : "https://www.dandelionchocolate.com/pages/shop",  
-    hanamiCollectionPage : "https://www.dandelionchocolate.com/products/hanami-collection" 
+    hanamiCollectionPage : "https://www.dandelionchocolate.com/products/hanami-collection", 
+    eventsPage : "https://www.dandelionchocolate.com/pages/events"
 }

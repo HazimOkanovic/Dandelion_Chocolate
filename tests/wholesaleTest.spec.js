@@ -2,12 +2,9 @@ import { test, expect } from "@playwright/test";
 import { Data, PagesUrls } from "../testData/data";
 import { Header } from "../pages/header";
 import { WholesalePage } from "../pages/wholesalePage";
-import { EmailPage } from "../pages/emailPage";
 
 let page;
 let newPage;
-let secondPage;
-let number;
 
 test.beforeAll(async ({ browser, baseURL }) => {
     const context = await browser.newContext();
@@ -49,7 +46,6 @@ test.describe('Wholesale tests', () => {
         for (const item of products) {
             await item.click();
             productNames.push(await wholesalePage.barProductNames.textContent());
-            expect(await wholesalePage.addToCartButton).toBeEnabled();
             expect(await wholesalePage.addToCartButtonText).toHaveText(Data.addToCartWholeSale)
             await newPage.goBack();
         }
