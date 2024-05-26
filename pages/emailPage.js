@@ -25,7 +25,7 @@ export class EmailPage {
     await expect(await iframe.locator("//span[contains(., 'Hanami')]")).toHaveText(Data.hanamiCollectionEmail, {timeout: 20000});
     await expect(await iframe.locator("//p[@class='order-list__item-price']")).toContainText(Data.hanamiCollectionPrice);
     await expect(await iframe.locator("(//td[@class='subtotal-line__value']//span[contains(., '0.00')])[3]")).toContainText(Data.zeroPrice);
-  
+
     const [newPage] = await Promise.all([
       this.page.waitForEvent('popup'), 
       await iframe.locator("//a[text() = 'Cancel']").click()
@@ -41,20 +41,6 @@ export class EmailPage {
     await this.page.close();
   }
 
-  async getWholesaleNumber(){
-    await this.page.goto("https://inboxkitten.com/inbox/hazim.okanovic/list");
-    await this.page.waitForTimeout(10000);
-    await this.refreshButton.click();
-    await expect(await this.page.getByText('mailer@shopify.com').first()).toContainText("mailer@shopify.com");
-    await this.page.getByText('mailer@shopify.com').first().click();
-    const iframe = await this.page.frameLocator("#message-content");
-    
-    const wholesaleNumber = await iframe.locator("//h2[@class='mail-token']");
-    
-    return wholesaleNumber;
-    await this.page.close();
-  }
-
   get emailConfirmation(){
     return this.page.locator("//div[@class='row-name']");
   }
@@ -65,5 +51,9 @@ export class EmailPage {
 
   async clickCancelLink(){
     this.cancelLink.click();
+  }
+
+  async clickConfirmCancelLink(){
+    this.confirmCancel.click();
   }
 }

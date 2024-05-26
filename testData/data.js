@@ -35,11 +35,14 @@ export const Data = {
     chocolateTastingHeader : "Chocolate Tasting - 16th Street Factory",
     truffleMakingHeader : "Truffle Making",
     factoryTour : "Factory Tour",
-    factoryTourHeader : "Dandelion Chocolate Factory Tour"
+    factoryTourHeader : "Dandelion Chocolate Factory Tour", 
+    halvaBonbons : "Halva Bonbons"
 }
 
 export const PagesUrls = {
     shopPage : "https://www.dandelionchocolate.com/pages/shop",  
     hanamiCollectionPage : "https://www.dandelionchocolate.com/products/hanami-collection", 
-    eventsPage : "https://www.dandelionchocolate.com/pages/events"
+    eventsPage : "https://www.dandelionchocolate.com/pages/events", 
+    halvaBonbonsPage : "https://www.dandelionchocolate.com/products/halva-bonbons", 
+    halvaBonbonsRedirectedPage : "https://www.dandelionchocolate.com/products/halva-bonbons?variant=41902529544332"
 }

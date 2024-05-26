@@ -10,6 +10,6 @@ exports.ShopPage = class ShopPage {
     }
 
     async clickOnProduct(product){
-        await this.page.locator('#Gifts').getByRole('link', { name: 'Hanami Collection', exact: true }).click()
+        await this.page.locator('#Gifts').getByRole('link', { name: product, exact: true }).click()
     }
 }

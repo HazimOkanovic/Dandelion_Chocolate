@@ -1,20 +1,10 @@
 // @ts-check
 const { devices } = require('@playwright/test');
+import { defineConfig } from '@playwright/test';
 
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// require('dotenv').config();
-
-// Local reporter configuration.
-let reporter = [['html', { open: 'never' }]];
-
-// Tweak reporter when running in Sauce Labs.
-if (process.env.SAUCE_VM) {
-  reporter = [['html', { open: 'never', outputFolder: '__assets__/html-report/', attachmentsBaseURL: './'}]];
-}
-
+export default defineConfig({
+  reporter: [['html', { open: 'never' }]],
+});
 /**
  * @see https://playwright.dev/docs/test-configuration
  * @type {import('@playwright/test').PlaywrightTestConfig}
@@ -51,8 +41,9 @@ const config = {
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     screenshot: 'on',
-    headless: true
+    headless: false
   },
+  
 
   /* Configure projects for major browsers */
   projects: [
@@ -93,14 +84,6 @@ const config = {
     // },
   ],
 
-  /* Folder for test artifacts such as screenshots, videos, traces, etc. */
-  // outputDir: 'test-results/',
-
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   port: 3000,
-  // },
 };
 
 module.exports = config;

@@ -38,8 +38,8 @@ test.describe('Check the checkout flow', () => {
         let cartSidePanel = new CartSidePanel(page);   
         await productPage.clickAddToCartButton();
         
-        expect(await cartSidePanel.productNameInCartSidePanel).toHaveText(Data.hanamiCollection)
-        expect(await cartSidePanel.productPriceInCartSidePanel).toHaveText(Data.hanamiCollectionPriceWithoutZeros)
+        expect(await cartSidePanel.hanamiProductNameInCartSidePanel).toHaveText(Data.hanamiCollection)
+        expect(await cartSidePanel.hanamiProductPriceInCartSidePanel).toHaveText(Data.hanamiCollectionPriceWithoutZeros)
     })
 
     test('Click checkout button and verify the price, the name, and total price in the cart',async () => {
