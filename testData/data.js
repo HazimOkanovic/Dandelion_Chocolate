@@ -27,7 +27,7 @@ export const Data = {
     wholeSaleHeader : "Chocolate for Our Partners",
     dandelionEmail : "hazim@dandelionchocolate.com", 
     password : "Mejrema28.12", 
-    wholeSaleBars : ["Kokoa Kamili", "Maya Mountain", "Zorzal Comunitario", "Anamalai", "Costa Esmeraldas", "Semuliki Forest", "Costa Esmeraldas"],
+    wholeSaleBars : ["Kokoa Kamili", "Maya Mountain", "Zorzal Comunitario", "Anamalai", "Costa Esmeraldas", "Semuliki Forest", "Costa Esmeraldas", "Maya Mountain", "Camino Verde"],
     otherWholeSaleProducts : ["House Hot Chocolate Mix, Camino Verde, Ecuador 70%, Case of 9 vials", "Making Chocolate: From Bean to Bar to S'more"],
     addToCartWholeSale: " Add to Cart ", 
     dateNightHeader : "Date Night with Dandelion", 
@@ -36,7 +36,8 @@ export const Data = {
     truffleMakingHeader : "Truffle Making",
     factoryTour : "Factory Tour",
     factoryTourHeader : "Dandelion Chocolate Factory Tour", 
-    halvaBonbons : "Halva Bonbons"
+    halvaBonbons : "Halva Bonbons",
+    hcMixTrio: "Hot Chocolate Mix Trio"
 }
 
 export const PagesUrls = {
@@ -44,5 +45,6 @@ export const PagesUrls = {
     hanamiCollectionPage : "https://www.dandelionchocolate.com/products/hanami-collection", 
     eventsPage : "https://www.dandelionchocolate.com/pages/events", 
     halvaBonbonsPage : "https://www.dandelionchocolate.com/products/halva-bonbons", 
-    halvaBonbonsRedirectedPage : "https://www.dandelionchocolate.com/products/halva-bonbons?variant=41902529544332"
+    halvaBonbonsRedirectedPage : "https://www.dandelionchocolate.com/products/halva-bonbons?variant=41902529544332",
+    hcMixTrio : "https://www.dandelionchocolate.com/products/hot-chocolate-mix-trio"
 }

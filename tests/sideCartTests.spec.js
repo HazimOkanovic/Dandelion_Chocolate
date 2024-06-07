@@ -28,53 +28,53 @@ test('Side cart panel tests', async () => {
     await page.waitForTimeout(2000)
     await productPage.clickAddToCartButton();
         
-    await expect(cartSidePanel.productNameInCartSidePanel).toHaveText(Data.halvaBonbons)
-    await expect(cartSidePanel.productPriceInCartSidePanel).toHaveText("$45")
+    await expect(cartSidePanel.halvaProductNameInCartSidePanel).toHaveText(Data.halvaBonbons)
+    await expect(cartSidePanel.halvaProductPriceInCartSidePanel).toHaveText("$45")
 
-    await cartSidePanel.clickXButton();
+    await cartSidePanel.clickXButton(); 
     await productPage.clickAddToCartButton();
 
-    await expect(cartSidePanel.productNameInCartSidePanel).toHaveText(Data.halvaBonbons)
-    await expect(cartSidePanel.productPriceInCartSidePanel).toHaveText("$90")
+    await expect(cartSidePanel.halvaProductNameInCartSidePanel).toHaveText(Data.halvaBonbons)
+    await expect(cartSidePanel.halvaProductPriceInCartSidePanel).toHaveText("$90")
 
     await cartSidePanel.clickXButton();
     await productPage.clickPlusButton();
     await productPage.clickAddToCartButton();
 
-    await expect(cartSidePanel.productNameInCartSidePanel).toHaveText(Data.halvaBonbons)
-    await expect(cartSidePanel.productPriceInCartSidePanel).toHaveText("$180")
+    await expect(cartSidePanel.halvaProductNameInCartSidePanel).toHaveText(Data.halvaBonbons)
+    await expect(cartSidePanel.halvaProductPriceInCartSidePanel).toHaveText("$180")
 
     await cartSidePanel.clickRemoveButton();
     await page.waitForTimeout(2000)
     await cartSidePanel.clickXButton();
     await productPage.clickPlusButton();
     await productPage.clickAddToCartButton();
-    await expect(cartSidePanel.productNameInCartSidePanel).toHaveText(Data.halvaBonbons)
-    await expect(cartSidePanel.productPriceInCartSidePanel).toHaveText("$135")
+    await expect(cartSidePanel.halvaProductNameInCartSidePanel).toHaveText(Data.halvaBonbons)
+    await expect(cartSidePanel.halvaProductPriceInCartSidePanel).toHaveText("$135")
 
     await cartSidePanel.clickProductLink();
     await expect(page.url()).toMatch(PagesUrls.halvaBonbonsRedirectedPage);
 
     await productPage.clickPlusButton();
     await productPage.clickAddToCartButton();
-    await expect(cartSidePanel.productNameInCartSidePanel).toHaveText(Data.halvaBonbons)
-    await expect(cartSidePanel.productPriceInCartSidePanel).toHaveText("$225")
+    await expect(cartSidePanel.halvaProductNameInCartSidePanel).toHaveText(Data.halvaBonbons)
+    await expect(cartSidePanel.halvaProductPriceInCartSidePanel).toHaveText("$225")
 
     await cartSidePanel.clickXButton();
     await productPage.clickMinusButton();
     await productPage.clickAddToCartButton();
-    await expect(cartSidePanel.productNameInCartSidePanel).toHaveText(Data.halvaBonbons)
-    await expect(cartSidePanel.productPriceInCartSidePanel).toHaveText("$270")
+    await expect(cartSidePanel.halvaProductNameInCartSidePanel).toHaveText(Data.halvaBonbons)
+    await expect(cartSidePanel.halvaProductPriceInCartSidePanel).toHaveText("$270")
 
     await cartSidePanel.clickMinusButton();
     await page.waitForTimeout(2000)
-    await expect(cartSidePanel.productNameInCartSidePanel).toHaveText(Data.halvaBonbons)
-    await expect(cartSidePanel.productPriceInCartSidePanel).toHaveText("$225")
+    await expect(cartSidePanel.halvaProductNameInCartSidePanel).toHaveText(Data.halvaBonbons)
+    await expect(cartSidePanel.halvaProductPriceInCartSidePanel).toHaveText("$225")
 
     await cartSidePanel.clickPlusButton();
     await page.waitForTimeout(2000)
     await cartSidePanel.clickPlusButton();
     await page.waitForTimeout(2000)
-    await expect(cartSidePanel.productNameInCartSidePanel).toHaveText(Data.halvaBonbons)
-    await expect(cartSidePanel.productPriceInCartSidePanel).toHaveText("$315")
+    await expect(cartSidePanel.halvaProductNameInCartSidePanel).toHaveText(Data.halvaBonbons)
+    await expect(cartSidePanel.halvaProductPriceInCartSidePanel).toHaveText("$315")
 });

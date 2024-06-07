@@ -5,8 +5,10 @@ exports.CartSidePanel = class CartSidePanel {
         this.checkoutButton = page.locator("//a[@title='View Cart']");
         this.hanamiProductPriceInCartSidePanel = page.locator("//div[@class='product-cart-item-info']//a[@title='Hanami Collection']//parent::div//following-sibling::div//child::div[@class='pn-total-line-item']");
         this.hanamiProductNameInCartSidePanel = page.locator("//div[@class='product-cart-item-info']//a[@title='Hanami Collection']");
-        this.productPriceInCartSidePanel = page.locator("//div[@class='product-cart-item-info']//a[@title='Halva Bonbons']//parent::div//following-sibling::div//child::div[@class='pn-total-line-item']");
-        this.productNameInCartSidePanel = page.locator("//div[@class='product-cart-item-info']//a[@title='Halva Bonbons']");
+        this.halvaProductPriceInCartSidePanel = page.locator("//div[@class='product-cart-item-info']//a[@title='Halva Bonbons']//parent::div//following-sibling::div//child::div[@class='pn-total-line-item']");
+        this.halvaProductNameInCartSidePanel = page.locator("//div[@class='product-cart-item-info']//a[@title='Halva Bonbons']");
+        this.hcProductPriceInCartSidePanel = page.locator("//div[@class='product-cart-item-info']//a[@title='Hot Chocolate Mix Trio']//parent::div//following-sibling::div//child::div[@class='pn-total-line-item']");
+        this.hcProductNameInCartSidePanel = page.locator("//div[@class='product-cart-item-info']//a[@title='Hot Chocolate Mix Trio']");
         this.unitNumber = page.locator("//input[@name = 'updates[]']");
         this.xButton = page.locator("(//side-panel-close[@class = 'side-panel-close'])[1]");
         this.removeButton = page.locator("//a[text() = 'Remove']");
