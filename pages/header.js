@@ -1,6 +1,3 @@
-const { WholesalePage } = require("./wholesalePage");
-import { expect } from "@playwright/test";
-
 exports.Header = class Header {
 
     constructor(page) {
@@ -8,6 +5,7 @@ exports.Header = class Header {
         this.shopAllLink = page.locator("(//a[@title='Shop'])[1]");
         this.moreLink = page.locator("//a[@title='More']");
         this.wholeSaleLink = page.locator("//a[@title='Wholesale']");
+        this.myAccount = page.locator("//a[@title='My Account']");
     }
 
     async clickShopLink(){
@@ -18,7 +16,7 @@ exports.Header = class Header {
         await this.moreLink.click();
     }
 
-    async clickWholesaleAndVerifyTitle(){
-         
+    async clickMyTitle(){
+        await this.myAccount.click();
     }
 }

@@ -46,5 +46,6 @@ export const PagesUrls = {
     eventsPage : "https://www.dandelionchocolate.com/pages/events", 
     halvaBonbonsPage : "https://www.dandelionchocolate.com/products/halva-bonbons", 
     halvaBonbonsRedirectedPage : "https://www.dandelionchocolate.com/products/halva-bonbons?variant=41902529544332",
-    hcMixTrio : "https://www.dandelionchocolate.com/products/hot-chocolate-mix-trio"
+    hcMixTrio : "https://www.dandelionchocolate.com/products/hot-chocolate-mix-trio", 
+    loginPage : "https://www.dandelionchocolate.com/account/login"
 }
