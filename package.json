@@ -25,5 +25,8 @@
   "devDependencies": {
     "@playwright/test": "^1.43.1",
     "saucectl": "^0.170.0"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.14"
   }
 }

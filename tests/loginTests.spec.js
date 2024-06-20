@@ -15,7 +15,7 @@ test.beforeAll(async ({ browser, baseURL }) => {
 test('Login tests', async () => {
     const headerPage = new Header(page);
     const loginPage = new LoginPage(page);
-
+    
     await headerPage.clickMyTitle();
     await expect(page.url()).toMatch(PagesUrls.loginPage);
 
