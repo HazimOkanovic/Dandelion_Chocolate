@@ -3,12 +3,9 @@ const { devices } = require('@playwright/test');
 import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
-  reporter: [['html', { open: 'never' }]],
+  reporter: [['html', { outputFolder: 'my-report' }]],
 });
-/**
- * @see https://playwright.dev/docs/test-configuration
- * @type {import('@playwright/test').PlaywrightTestConfig}
- */
+
 const config = {
   testDir: './tests',
   /* Maximum time one test can run for. */
