@@ -20,11 +20,18 @@ async main(addedFile) {
                 rejectUnAuthorized:true
               }
   });
-     transporter.sendMail({
-      from: '"Hazim Okanovic" <hazimokanovic258@gmail.com>', // sender address
+  var mailOptions = {
+    from: '"Hazim Okanovic" <hazimokanovic258@gmail.com>', // sender address
       to: "hazim@dandelionchocolate.com",  // list of receivers
       subject: "Daily Regression Report", // Subject line
       text: "Hello! Here is the regression report for " + todayFormatted +". \nPlease download the index.html file to see the full report. \nThanks and take care. :)" + addedFile
-    });
-  }
-}
+    };
+
+  transporter.sendMail(mailOptions, function(error, info){
+    if(error){
+       console.log(error);
+    }else{
+    console.log('Message sent: ' + info.response);
+    }
+  })
+}}

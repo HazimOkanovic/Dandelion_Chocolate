@@ -25,12 +25,9 @@ class MyReporter {
     onEnd(result) {
       onEndString = `Finished the run: ${result.status}`
       allText.push(onEndString)
-      //let emailer = new Emailer()
-      //emailer.main(allText);
+      let emailer = new Emailer()
+      emailer.main(allText);
       console.log(allText)
-    }
-    returnText(){
-      return allText
-    }  
 }
-module.exports = MyReporter
+}
+module.exports = MyReporter;
