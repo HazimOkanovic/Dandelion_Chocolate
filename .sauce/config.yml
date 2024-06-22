@@ -32,4 +32,6 @@ suites:
       project: "Sender"
 # Controls what artifacts to fetch when the suites have finished.
 artifacts:
-  directory: ./my-report/index.html
+  download:
+    when: always
+    directory: ./artifacts/
