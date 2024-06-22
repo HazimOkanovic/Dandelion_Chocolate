@@ -23,7 +23,6 @@ suites:
     params:
       browserName: "firefox"
       project: "Regression"
-suites:
   - name: "Sender"
     platformName: "Windows 11"
     screenResolution: "1440x900"
