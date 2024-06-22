@@ -5,7 +5,7 @@ let onTestBeginString;
 let onTestEndString;
 let onEndString;
 let allText = []
-exports.MyReporter = class MyReporter {
+class MyReporter {
 
     onBegin(config, suite) {
       onBeginString = `Starting the run with ${suite.allTests().length} tests`
@@ -33,3 +33,4 @@ exports.MyReporter = class MyReporter {
       return allText
     }  
 }
+module.exports = MyReporter
