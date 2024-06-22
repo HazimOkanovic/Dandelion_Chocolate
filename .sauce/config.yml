@@ -11,6 +11,11 @@ sauce:
 npm:
   packages:
     nodemailer: "^6.9.14"
+    lru-cache: "10.2.2"
+    glob: "10.4.2"
+    rimraf: "5.0.7"
+    @eslint/config-array: "0.16.0"
+    @eslint/object-schema: "2.1.4"
 playwright:
   version: package.json # See https://docs.saucelabs.com/web-apps/automated-testing/playwright/#supported-testing-platforms for a list of supported versions.
   configFile: playwright.config.js
