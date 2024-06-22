@@ -21,11 +21,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Saucectl RUN
-        uses: saucectl run "@regression"
+        uses: saucelabs/saucectl-run-action@v3 "@regression"
         with:
           concurrency: 1
 
       - name: Saucectl RUN Send Email
-        uses: saucectl run "@sendEmail"
+        uses: saucelabs/saucectl-run-action@v3 "@sendEmail"
         with:
           concurrency: 1    
