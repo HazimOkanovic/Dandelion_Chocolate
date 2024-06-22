@@ -5,7 +5,7 @@ let onTestBeginString;
 let onTestEndString;
 let onEndString;
 let allText = []
-class MyReporter {
+exports.MyReporter = class MyReporter {
 
     onBegin(config, suite) {
       onBeginString = `Starting the run with ${suite.allTests().length} tests`
@@ -25,9 +25,11 @@ class MyReporter {
     onEnd(result) {
       onEndString = `Finished the run: ${result.status}`
       allText.push(onEndString)
-      let emailer = new Emailer()
-      emailer.main(allText);
+      //let emailer = new Emailer()
+      //emailer.main(allText);
       console.log(allText)
+    }
+    returnText(){
+      return allText
+    }  
 }
-}
-module.exports = MyReporter;

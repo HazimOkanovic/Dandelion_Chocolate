@@ -3,7 +3,7 @@ import { Data, PagesUrls } from "../../testData/data";
 import { Header } from "../../pages/header";
 import { WholesalePage } from "../../pages/wholesalePage";
 import { Emailer } from "../../email/emailer"
-import { Reporter } from "../../email/reporter"
+import { MyReporter } from "../../email/reporter"
 
 let page;
 let newPage;
@@ -57,7 +57,7 @@ test.describe('Wholesale tests', {tag: '@regression'}, () => {
     test("Check if other products' links are working and if they are sold out",async () => {
         let wholesalePage = new WholesalePage(newPage);
         let emailer = new Emailer();
-        let reporter = new Reporter();
+        let reporter = new MyReporter();
         let products = [];
         let productNames = [];
         for (let index = 0; index < await wholesalePage.shopNowButtons.count(); index++) {
@@ -72,6 +72,6 @@ test.describe('Wholesale tests', {tag: '@regression'}, () => {
         }
         expect(await productNames).toEqual(Data.otherWholeSaleProducts)
 
-        await emailer.main(reporter.allText)
+        await emailer.main(reporter.returnText())
     })
 });
