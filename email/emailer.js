@@ -26,7 +26,7 @@ async main() {
       subject: "Daily Regression Report", // Subject line
       text: "Hello! Here is the regression report for " +todayFormatted+". \nPlease download the index.html file to see the full report. \nThanks and take care. :)", 
       attachments: {
-        path: "./artifacts/index.html"
+        path: "./my-report/index.html"
       } 
       
     });
