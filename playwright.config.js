@@ -40,7 +40,6 @@ const config = {
 
   /* Configure projects for major browsers */
   projects: [
-
     {
       name: 'Regression',
       testMatch: /regression/,
