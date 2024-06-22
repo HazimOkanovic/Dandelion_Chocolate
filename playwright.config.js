@@ -43,11 +43,18 @@ const config = {
 
     {
       name: 'Regression',
+      testMatch: /regression/,
+      use: {
+        ...devices['Desktop Firefox'],
+      }
+    },
+    {
+      name: 'Sender',
+      testMatch: /sender/,
       use: {
         ...devices['Desktop Firefox'],
       }
     }
-
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',

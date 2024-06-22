@@ -1,5 +1,5 @@
 import { test } from "@playwright/test";
-import { ShopPage } from "../pages/shopPage";
+import { ShopPage } from "../../pages/shopPage";
 
 test('Check if there is sold out product in the shop page', {tag: '@regression'}, async ({ page }) => {
     await page.goto("https://www.dandelionchocolate.com/pages/shop");

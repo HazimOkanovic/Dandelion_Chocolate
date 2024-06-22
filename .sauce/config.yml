@@ -22,7 +22,15 @@ suites:
     testMatch: ['.*.js']
     params:
       browserName: "firefox"
-      project: "Regression"  # Runs the project that's defined in `playwright.config.js`
+      project: "Regression"
+suites:
+  - name: "Sender"
+    platformName: "Windows 11"
+    screenResolution: "1440x900"
+    testMatch: ['.*.js']
+    params:
+      browserName: "firefox"
+      project: "Sender"
 # Controls what artifacts to fetch when the suites have finished.
 # artifacts:
 #   download:

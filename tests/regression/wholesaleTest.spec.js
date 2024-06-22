@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
-import { Data, PagesUrls } from "../testData/data";
-import { Header } from "../pages/header";
-import { WholesalePage } from "../pages/wholesalePage";
+import { Data, PagesUrls } from "../../testData/data";
+import { Header } from "../../pages/header";
+import { WholesalePage } from "../../pages/wholesalePage";
 
 let page;
 let newPage;

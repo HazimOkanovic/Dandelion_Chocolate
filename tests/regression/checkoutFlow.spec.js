@@ -1,12 +1,12 @@
 import { test, expect } from "@playwright/test";
-import { ShopPage } from "../pages/shopPage";
-import { ProductPage } from "../pages/productPage";
-import { CartSidePanel } from "../pages/cartSidePanel";
-import { CartPage } from "../pages/cartPage";
-import { CheckoutPage } from "../pages/checkoutPage";
-import { Data, PagesUrls } from "../testData/data";
-import { EmailPage } from "../pages/emailPage";
-import { Header } from "../pages/header";
+import { ShopPage } from "../../pages/shopPage";
+import { ProductPage } from "../../pages/productPage";
+import { CartSidePanel } from "../../pages/cartSidePanel";
+import { CartPage } from "../../pages/cartPage";
+import { CheckoutPage } from "../../pages/checkoutPage";
+import { Data, PagesUrls } from "../../testData/data";
+import { EmailPage } from "../../pages/emailPage";
+import { Header } from "../../pages/header";
 
 let page;
 let secondPage;

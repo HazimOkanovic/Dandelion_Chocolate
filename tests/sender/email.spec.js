@@ -1,5 +1,5 @@
 import {test} from "@playwright/test"
-import {Emailer} from "../email/emailer"
+import {Emailer} from "../../email/emailer"
 import {setTimeout} from "node:timers/promises";
 
 let page;
