@@ -33,3 +33,4 @@ exports.MyReporter = class MyReporter {
       return allText
     }  
 }
+module.exports = MyReporter
