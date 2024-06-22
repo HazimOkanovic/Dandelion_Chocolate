@@ -1,5 +1,4 @@
-import * as nodemailer from 'nodemailer'
-const fs = require('fs')
+import nodemailer from 'nodemailer'
 
 let transporter;
 exports.Emailer = class Emailer {

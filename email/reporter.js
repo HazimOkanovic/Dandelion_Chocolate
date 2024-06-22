@@ -1,8 +1,5 @@
-const fs = require('fs')
-let file = 'Report.txt';
 import {Emailer} from "../email/emailer"
 
-let transporter;
 let onBeginString;
 let onTestBeginString;
 let onTestEndString;
