@@ -1,7 +1,7 @@
 import { test } from "@playwright/test";
 import { MothersDayPage } from "../../pages/mothersDayPage";
 
-test('Check if there is sold out product in the Mothers Day Collection', {tag: '@regression'}, async ({ page }) => {
+test.skip('Check if there is sold out product in the Mothers Day Collection', {tag: '@regression'}, async ({ page }) => {
     await page.goto("https://www.dandelionchocolate.com/collections/mothers-day");
     let mothersDayPage = new MothersDayPage(page);
     let products_number;

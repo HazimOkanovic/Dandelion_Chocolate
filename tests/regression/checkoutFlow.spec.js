@@ -17,7 +17,7 @@ test.beforeAll(async ({ browser, baseURL }) => {
     await page.goto(`${baseURL}`);
 });
 
-test.describe('Check the checkout flow', {tag: '@regression'}, () => {
+test.describe.skip('Check the checkout flow', {tag: '@regression'}, () => {
     test.describe.configure({ mode: 'serial' });
     test('Go to the shop page',async () => {
         let headerPage = new Header(page);

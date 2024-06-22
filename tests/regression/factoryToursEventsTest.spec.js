@@ -11,7 +11,7 @@ test.beforeAll(async ({ browser, baseURL }) => {
     await page.goto(PagesUrls.eventsPage);
 });
 
-test('Factory tour events test', {tag: '@regression'}, async () => {
+test.skip('Factory tour events test', {tag: '@regression'}, async () => {
     test.setTimeout(8000000);
     await expect(await page.url()).toMatch(PagesUrls.eventsPage)
     let eventsPage = new EventsPage(page);

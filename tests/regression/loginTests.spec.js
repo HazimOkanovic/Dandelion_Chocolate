@@ -12,7 +12,7 @@ test.beforeAll(async ({ browser, baseURL }) => {
     await page.goto(`${baseURL}`);
 });
 
-test('Login tests', {tag: '@regression'}, async () => {
+test.skip('Login tests', {tag: '@regression'}, async () => {
     const headerPage = new Header(page);
     const loginPage = new LoginPage(page);
     

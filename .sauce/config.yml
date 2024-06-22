@@ -31,9 +31,7 @@ suites:
       browserName: "firefox"
       project: "Sender"
 # Controls what artifacts to fetch when the suites have finished.
-# artifacts:
-#   download:
-#     when: always
-#     match:
-#       - console.log
-#     directory: ./artifacts/
+artifacts:
+  download:
+    when: always
+    directory: ./my-report/index.html

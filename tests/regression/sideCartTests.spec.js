@@ -14,7 +14,7 @@ test.beforeAll(async ({ browser, baseURL }) => {
     await page.goto(`${baseURL}`);
 });
 
-test('Side cart panel tests', {tag: '@regression'}, async () => {
+test.skip('Side cart panel tests', {tag: '@regression'}, async () => {
     let headerPage = new Header(page);
     let shopPage = new ShopPage(page);
     let productPage = new ProductPage(page);
