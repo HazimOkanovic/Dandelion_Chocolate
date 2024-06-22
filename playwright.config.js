@@ -46,7 +46,7 @@ const config = {
       testMatch: /regression/,
       use: {
         ...devices['Desktop Firefox'],
-      }
+      } 
     },
     {
       name: 'Sender',
