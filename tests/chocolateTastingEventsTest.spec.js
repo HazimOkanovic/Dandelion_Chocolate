@@ -11,7 +11,7 @@ test.beforeAll(async ({ browser, baseURL }) => {
     await page.goto(PagesUrls.eventsPage);
 });
 
-test('Chocolate Tasting events test',async () => {
+test('Chocolate Tasting events test', {tag: '@regression'}, async () => {
     await expect(await page.url()).toMatch(PagesUrls.eventsPage)
     let eventsPage = new EventsPage(page);
     let allEvents = [];

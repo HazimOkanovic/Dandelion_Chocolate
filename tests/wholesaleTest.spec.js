@@ -12,7 +12,7 @@ test.beforeAll(async ({ browser, baseURL }) => {
     await page.goto(`${baseURL}`);
 });
 
-test.describe('Wholesale tests', () => {
+test.describe('Wholesale tests', {tag: '@regression'}, () => {
     test.describe.configure({ mode: 'serial' });
     test('Go to the wholesale page',async () => {
         let headerPage = new Header(page);
