@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
-import { EventsPage } from "../pages/eventsPage";
-import { Data, PagesUrls } from "../testData/data";
+import { EventsPage } from "../../pages/eventsPage";
+import { Data, PagesUrls } from "../../testData/data";
 
 let page;
 let context;
