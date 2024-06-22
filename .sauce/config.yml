@@ -34,4 +34,4 @@ suites:
 artifacts:
   download:
     when: always
-    directory: ./artifacts/
+    directory: ./my-report/
