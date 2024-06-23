@@ -1,11 +1,17 @@
 import {Emailer} from "../email/emailer"
-import * as emailer1 from "../email/emailer1"
 
 let onBeginString;
 let onTestBeginString;
 let onTestEndString;
 let onEndString;
-let allText = []
+let allText = [];
+let API_KEY = '6fc15d4ecaf1d32622270e9e948ae962-6fafb9bf-cd3e85e5';
+let DOMAIN = 'sandbox40580acd4be04e99bdbbe938cd3b851f.mailgun.org';
+
+const formData = require('form-data');
+const Mailgun = require('mailgun.js');
+const mailgun = new Mailgun(formData);
+const mg = mailgun.client({username: 'api', key: API_KEY});
 class MyReporter {
 
     onBegin(config, suite) {
@@ -29,7 +35,17 @@ class MyReporter {
       let emailer = new Emailer()
       emailer.main(allText);
       console.log(allText)
-      emailer1.sendEmail()
+      mg.messages.create(DOMAIN, {
+        from: "hazimokanovic258@gmail.com",
+        to: ["hazim@dandelionchocolate.com"],
+        subject: "Hello",
+        text: allText.toString(),
+        html: "<h1>Testing some Mailgun awesomeness!</h1>"
+      })
+      .then(msg => console.log(msg)) // logs response data
+      .catch(err => console.log(err));
 }
 }
 module.exports = MyReporter;
+
+
