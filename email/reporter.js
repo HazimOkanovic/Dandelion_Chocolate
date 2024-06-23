@@ -13,7 +13,6 @@ const Mailgun = require('mailgun.js');
 const mailgun = new Mailgun(formData);
 const mg = mailgun.client({username: 'api', key: API_KEY});
 class MyReporter {
-
     onBegin(config, suite) {
       onBeginString = `Starting the run with ${suite.allTests().length} tests`
       allText.push(onBeginString);
@@ -39,12 +38,11 @@ class MyReporter {
         from: "hazimokanovic258@gmail.com",
         to: ["hazim@dandelionchocolate.com"],
         subject: "Hello",
-        text: allText.toString(),
-        html: "<h1>Testing some Mailgun awesomeness!</h1>"
+        text: allText
       })
-      .then(msg => console.log(msg)) // logs response data
+      .then(msg => console.log(msg))
       .catch(err => console.log(err));
-}
+  }
 }
 module.exports = MyReporter;
 
