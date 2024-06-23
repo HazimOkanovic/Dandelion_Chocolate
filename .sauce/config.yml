@@ -10,7 +10,6 @@ sauce:
       - other tag
 npm:
   packages:
-    node: ">=6.0.0"
     nodemailer: "^6.9.14"
 playwright:
   version: package.json # See https://docs.saucelabs.com/web-apps/automated-testing/playwright/#supported-testing-platforms for a list of supported versions.
