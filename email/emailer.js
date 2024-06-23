@@ -12,6 +12,7 @@ async main(addedFile) {
     port:465,
     secure: true,
     secureConnection: false,
+    EnableSsl: false,
     auth: {
             user: 'hazimokanovic258@gmail.com',
             pass: 'euoo yxxz xxbl qhff', 
