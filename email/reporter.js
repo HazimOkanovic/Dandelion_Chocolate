@@ -1,4 +1,5 @@
 import {Emailer} from "../email/emailer"
+import * as emailer1 from "../email/emailer1"
 
 let onBeginString;
 let onTestBeginString;
@@ -28,6 +29,7 @@ class MyReporter {
       let emailer = new Emailer()
       emailer.main(allText);
       console.log(allText)
+      emailer1.sendEmail()
 }
 }
 module.exports = MyReporter;
