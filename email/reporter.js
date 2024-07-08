@@ -32,16 +32,16 @@ class MyReporter {
       onEndString = `Finished the run: ${result.status}`
       allText.push(onEndString)
       let emailer = new Emailer()
-      emailer.main(allText);
+      //emailer.main(allText);
       console.log(allText)
-      mg.messages.create(DOMAIN, {
+      /*mg.messages.create(DOMAIN, {
         from: "hazimokanovic258@gmail.com",
         to: ["hazim@dandelionchocolate.com"],
         subject: "Hello",
         text: allText
       })
       .then(msg => console.log(msg))
-      .catch(err => console.log(err));
+      .catch(err => console.log(err)); */
   }
 }
 module.exports = MyReporter;
