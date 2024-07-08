@@ -4,7 +4,6 @@ let onBeginString;
 let onTestBeginString;
 let onTestEndString;
 let onEndString;
-
 let API_KEY = '6fc15d4ecaf1d32622270e9e948ae962-6fafb9bf-cd3e85e5';
 let DOMAIN = 'sandbox40580acd4be04e99bdbbe938cd3b851f.mailgun.org';
 
