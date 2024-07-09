@@ -34,8 +34,8 @@ pipeline {
     // it can load the record key variable from credentials store
     // see https://jenkins.io/doc/book/using/using-credentials/
     // https://www.jenkins.io/doc/book/pipeline/jenkinsfile/#handling-credentials
-    SAUCE_USERNAME = credentials('sauce-username')
-    SAUCE_ACCESS_KEY = credentials('sauce-access-key')
+    SAUCE_USERNAME = 'Hazim'
+    SAUCE_ACCESS_KEY = '.github/workflows/test.yml'
   }
 
   stages {
