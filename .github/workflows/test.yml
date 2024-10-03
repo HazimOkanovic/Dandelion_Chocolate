@@ -1,12 +1,12 @@
 name: saucectl playwright tests
 
-on:
-  pull_request:
-  push:
-    branches:
-      - develop
-  schedule: 
-    - cron: '00 22 * * *'
+#on:
+ # pull_request:
+#  push:
+  #  branches:
+ #     - develop
+ # schedule: 
+   # - cron: '00 22 * * *'
 
 env:
   SAUCE_USERNAME: 'Hazim'
